@@ -1,0 +1,13 @@
+[
+    {"category":"PERSON",   "subcategory":"Bob Jones"},
+    {"category":"PLACE",    "subcategory":"Washington"},
+    {"category":"PERSON",   "subcategory":"Mary"},
+    {"category":"COMPUTER", "subcategory":"Mac"},
+    {"category":"PERSON",   "subcategory":"Bob Jones"},
+    {"category":"OTHER",    "subcategory":"Tree"},
+    {"category":"ANIMAL",   "subcategory":"Dog"},
+    {"category":"PLACE",    "subcategory":"Texas"},
+    {"category":"FOOD",     "subcategory":"Steak"},
+    {"category":"ANIMAL",   "subcategory":"Cat"},
+    {"category":"PERSON",   "subcategory":"Mac"}
+]
