@@ -1,5 +1,6 @@
 package com.khalichi.swagger;
 
+import org.apache.cxf.Bus;
 import org.apache.cxf.endpoint.Server;
 import org.apache.cxf.jaxrs.swagger.Swagger2Feature;
 
@@ -14,7 +15,7 @@ public class CustomSwagger2Feature extends Swagger2Feature {
 
     /** {@inheritDoc} */
     @Override
-    protected void addSwaggerResource(final Server theServer) {
+    protected void addSwaggerResource(final Server theServer, final Bus theBus) {
         this.setBasePath(BASE_PATH);
         this.setTitle("Categorizer");
         this.setDescription("APIs for categories and subcategories management");
@@ -23,6 +24,6 @@ public class CustomSwagger2Feature extends Swagger2Feature {
         this.setLicenseUrl("mailto:keivan@khalichi.com");
         this.setVersion("0.0.1-SNAPSHOT");
         this.setPrettyPrint(true);
-        super.addSwaggerResource(theServer);
+        super.addSwaggerResource(theServer, theBus);
     }
 }

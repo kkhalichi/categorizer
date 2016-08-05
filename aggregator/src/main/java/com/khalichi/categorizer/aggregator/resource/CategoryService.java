@@ -15,6 +15,7 @@ import javax.ws.rs.core.Response;
 import com.khalichi.categorizer.aggregator.model.CategorizerModel;
 import com.khalichi.categorizer.persistence.entity.Category;
 import com.khalichi.categorizer.persistence.entity.Subcategory;
+import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiImplicitParams;
 import io.swagger.annotations.ApiOperation;
@@ -26,6 +27,7 @@ import io.swagger.annotations.ApiParam;
  */
 @Path("/categorizer")
 @Produces(MediaType.APPLICATION_JSON)
+@Api(value="/", description="APIs for categories and subcategories management")
 public interface CategoryService {
 
     /**
