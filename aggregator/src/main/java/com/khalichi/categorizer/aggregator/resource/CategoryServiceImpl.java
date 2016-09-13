@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
+import java.util.stream.StreamSupport;
 import javax.annotation.PostConstruct;
 import javax.validation.constraints.NotNull;
 import javax.ws.rs.core.Response;
@@ -180,9 +181,7 @@ public class CategoryServiceImpl implements CategoryService {
     void initialize() {
         if (!Strings.isNullOrEmpty(this.defaultCategories)) {
             Iterable<String> aParsedCategories = Splitter.on(',').trimResults().omitEmptyStrings().split(this.defaultCategories);
-            for (final String aCategory : aParsedCategories) {
-                this.addCategory(aCategory);
-            }
+            StreamSupport.stream(aParsedCategories.spliterator(), true).forEach(this::addCategory);
         }
     }
 }
